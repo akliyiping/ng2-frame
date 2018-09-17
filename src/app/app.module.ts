@@ -10,13 +10,21 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { LayoutComponent } from './core/component/layout/layout.component';
+import { SiderComponent } from './core/component/layout/sider/sider.component';
+import { FooterComponent } from './core/component/layout/footer/footer.component';
+import { HeaderComponent } from './core/component/layout/header/header.component';
+import { ContentComponent } from './core/component/layout/content/content.component';
 
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    SiderComponent,
+    FooterComponent,
+    HeaderComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

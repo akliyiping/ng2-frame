@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-layout',
@@ -7,17 +7,11 @@ import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
   isCollapsed = false;
-  triggerTemplate = null;
-  @ViewChild('trigger') customTrigger: TemplateRef<void>;
-  
   constructor() { }
 
   ngOnInit() {
   }
   
- /** custom trigger can be TemplateRef **/
-  changeTrigger(): void {
-    this.triggerTemplate = this.customTrigger;
-  }
+ 
 
 }
