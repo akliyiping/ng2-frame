@@ -33,6 +33,14 @@
             "scripts": []
           },
           "configurations": {
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hmr.ts"
+                }
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -58,6 +66,10 @@
             "browserTarget": "xys-saas-ng:build"
           },
           "configurations": {
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "xys-saas-ng:build:hmr"
+            },
             "production": {
               "browserTarget": "xys-saas-ng:build:production"
             }
