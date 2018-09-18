@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input()
   isCollapsed = true;
-  @Output() 
+  @Output()
   isCollapsedChange = new EventEmitter<boolean>();
   constructor() { }
 

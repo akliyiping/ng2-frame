@@ -1,10 +1,11 @@
 import {
-  Component,
   OnInit,
   ViewChild,
   TemplateRef,
-  Input
+  Input,
+  Component
 } from "@angular/core";
+import { Menu } from "@core/bean/dto/Menu";
 
 @Component({
   selector: "app-sider",
@@ -14,7 +15,8 @@ import {
 export class SiderComponent implements OnInit {
   @Input()
   isCollapsed = false;
-  
+  menu: Menu
+
   constructor() {}
 
   ngOnInit() {}
