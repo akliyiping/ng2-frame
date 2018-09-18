@@ -4,21 +4,26 @@ import {
   TemplateRef,
   Input,
   Component
-} from "@angular/core";
-import { Menu } from "@core/bean/dto/Menu";
+} from '@angular/core';
+import { MenuDto } from '@core/bean/dto/menu.dto';
+import { SiderService } from '@core/service/sider.service';
 
 @Component({
-  selector: "app-sider",
-  templateUrl: "./sider.component.html",
-  styleUrls: ["./sider.component.less"]
+  selector: 'app-sider',
+  templateUrl: './sider.component.html',
+  styleUrls: ['./sider.component.less']
 })
 export class SiderComponent implements OnInit {
   @Input()
   isCollapsed = false;
-  menu: Menu
+  menus: MenuDto[];
 
-  constructor() {}
+  constructor(private siderService: SiderService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.siderService.getMenus().subscribe((data) => {
+      this.menus = data.data;
+    });
+  }
 
 }

@@ -8,7 +8,7 @@ export interface Children {
 	parentId: string;
 }
 
-export interface Menu {
+export interface MenuDto {
 	children: Children[];
 	permissions: string;
 	name: string;

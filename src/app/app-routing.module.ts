@@ -1,4 +1,4 @@
-import { LayoutComponent } from './core/component/layout/layout.component';
+import { LayoutComponent } from '@core/component/layout/layout.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

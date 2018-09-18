@@ -1,0 +1,10 @@
+{
+    "/api": {
+      "target": "http://dev1.soeasypay.cn",
+      "secure": false,
+      "pathRewrite": {
+        "^/api": ""
+      },
+      "changeOrigin": true
+    }
+  }
