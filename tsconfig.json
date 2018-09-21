@@ -4,7 +4,7 @@
     "baseUrl": "./",
     "paths": {
       "@environments/*": ["src/environments/*"],
-      "@core/*": ["src/app/@core/*"],
+      "@core/*": ["src/app/@core/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

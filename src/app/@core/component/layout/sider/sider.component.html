@@ -3,29 +3,31 @@
 <div class="collapsed-logo" *ngIf="isCollapsed">
 </div>
 <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
-  <ng-container *ngFor="let parent of menus[0].children">
-    <li nz-submenu *ngIf="parent.children?.length">
+  <ng-container *ngIf="menus && menus[0] && menus[0].children">
+    <ng-container *ngFor="let parent of menus[0].children">
+      <li nz-submenu *ngIf="parent.children?.length">
       <span title>
         <i class="anticon anticon-user"></i>
         <span class="nav-text">{{parent.name}}
         </span>
       </span>
-      <ul *ngFor="let children of parent.children">
-        <li nz-menu-item>{{children.name}}</li>
-      </ul>
-    </li>
-    <li nz-menu-item *ngIf="!parent.children?.length">
+        <ul *ngFor="let children of parent.children">
+          <li nz-menu-item>{{children.name}}</li>
+        </ul>
+      </li>
+      <li nz-menu-item *ngIf="!parent.children?.length">
         <span title>
             <i class="anticon anticon-user"></i>
             <span class="nav-text">{{parent.name}}
-    
+
             </span>
         </span>
-    </li>
+      </li>
+    </ng-container>
   </ng-container>
 
 </ul>
-<!-- 
+<!--
 <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed" >
   <li nz-submenu>
     <span title><i class="anticon anticon-user"></i><span class="nav-text">User</span></span>
